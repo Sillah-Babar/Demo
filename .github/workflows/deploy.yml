@@ -27,6 +27,8 @@ jobs:
       run: pip install dvc[s3]
     - name: fetch weighrs
       run: dvc fetch
+    - name: Add weights
+      run: dvc pull
     - name: Create ZIP deployment package
       run:  sudo cp -ra  api/* ./
     - name: remove Directory
